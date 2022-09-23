@@ -11,21 +11,40 @@ Código Condição de pagamento
 */
 
 let precoProduto = parseFloat(prompt("Ola,por favor insira o valor do produto"))
-const metodoDePagamento = Number(prompt(`Informe o metodo de pagamento
+while (isNaN(precoProduto)) {
+       alert(`O preço digitado é invalido. Por favor, informe o preço apenas com numeros, sem caracteres `)
+       precoProduto = parseFloat(prompt("Ola,por favor insira o valor do produto"))
+}
+let metodoDePagamento = Number(prompt(`Informe o metodo de pagamento
 1- Dinheiro
 2- Cheque
 3- Cartão de credito`))
-
-if (metodoDePagamento == 1 || metodoDePagamento == 2) {precoProduto = (precoProduto * 0.9)}
-else if (metodoDePagamento == 3) {
-const parcelas = parseInt(prompt('Informe a quantidade de parcelas'))
-if (parcelas == 1) {precoProduto = precoProduto * 0.85}
-else if (parcelas == 2) {}
-else (precoProduto = precoProduto * 1.1)
+while (isNaN(metodoDePagamento) || (metodoDePagamento < 1) || (metodoDePagamento > 3)) {
+       alert(`opção invalida`)
+       metodoDePagamento = parseFloat(prompt(`Informe o metodo de pagamento
+1- Dinheiro
+2- Cheque
+3- Cartão de credito`))
+console.log(metodoDePagamento)
 }
 
+if (metodoDePagamento == 1 || metodoDePagamento == 2) { precoProduto = (precoProduto * 0.9) }
+else if (metodoDePagamento == 3) {
+       let parcelas = prompt('Informe a quantidade de parcelas')
+       while ((isNaN(parcelas)) || (parcelas <1)) {
+              alert(`Opção invalida, tente novamente`)
+              parcelas = prompt('Informe a quantidade de parcelas')
+              console.log(parcelas)
+       }
+       console.log(parcelas)
+       if (parcelas == 1) { precoProduto = precoProduto * 0.85 }
+       else if (parcelas == 2) { }
+       else { precoProduto = precoProduto * 1.1 }
+       // alert(`Opção Invalida`)
 
-       alert(`O valor total para pagamento é: R$${precoProduto.toFixed(2)} `)
+}
+
+alert(`O valor total para pagamento é: R$${precoProduto.toFixed(2)} `)
 
 
 
