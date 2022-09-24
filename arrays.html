@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const qtdProdutos = parseInt(prompt('Informe a quantidade de produtos'))
+    const precosProdutos = []
+    let soma = 0, max = 0, min = Number.MAX_VALUE
+    for (let i = 0; i < qtdProdutos; i++){        
+    precosProdutos[i] = parseFloat(prompt('Informe o valor do produto:'))
+    soma += precosProdutos[i]
+    console.log(precosProdutos)
+    }
+    for (let preco of precosProdutos) { 
+        if (preco < min){
+        min= preco
+    }
+        else if(preco > max){
+        max = preco
+    }
+}
+    alert(`Valor dos produtos: R$ ${soma.toFixed(2)}`)
+    alert(`Produto de menor valor R$ ${min.toFixed(2)}`)
+    alert (`Produto de maior valor: R$ ${max.toFixed(2)}`)
+  </script>
+</body>
+</html>

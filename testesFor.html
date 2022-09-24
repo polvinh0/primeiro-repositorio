@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- INSIRA A QUANTIDADE DE ALUNOS
+            A IDADE E MOSTRE O MAIS NOVO E O MAIS VELHO  -->
+
+    <script>
+        const idadeAlunos = []
+        let paresA = []
+        let imparesA = []
+        let min = Number.MAX_VALUE
+        let max = 0
+        let qtdAlunos = parseInt(prompt('Insira a quantidade de alunos'))
+        for (i = 0; i < qtdAlunos; i++) {
+            idadeAlunos[i] = parseInt(prompt(`Insira a idade do aluno ${i + 1}`))
+            console.log(idadeAlunos)
+
+        }
+        for (let idade of idadeAlunos) {
+            if (idade < min) {
+                min = idade
+            } if (max < idade) {
+                max = idade
+            }
+            if ((idade % 2) == 0) {
+                paresA[paresA.length] = idade
+            } else {
+                imparesA[imparesA.length] = idade
+            }
+
+        }
+        alert(`o aluno mais velho tem ${max}anos`)
+        alert(`o aluno mais novo tem ${min}anos`)
+        alert(`sao ${imparesA.length} impares ${imparesA}`)
+        alert(`sao ${paresA.length} pares ${ paresA }`)
+
+
+    </script>
+</body>
+
+</html>
