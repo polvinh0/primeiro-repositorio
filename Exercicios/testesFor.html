@@ -22,7 +22,7 @@
         for (i = 0; i < qtdAlunos; i++) {
             idadeAlunos[i] = parseInt(prompt(`Insira a idade do aluno ${i + 1}`))
             console.log(idadeAlunos)
-
+           
         }
         for (let idade of idadeAlunos) {
             if (idade < min) {
@@ -39,8 +39,8 @@
         }
         alert(`o aluno mais velho tem ${max} anos`)
         alert(`o aluno mais novo tem ${min} anos`)
-        alert(`sao ${imparesA.length} impares ${imparesA}`)
-        alert(`sao ${paresA.length} pares ${ paresA }`)
+        alert(`sao ${imparesA.length} impares ${imparesA.join(`, `)}`)
+        alert(`sao ${paresA.length} pares ${paresA.join(`, `)}`)
 
 
     </script>

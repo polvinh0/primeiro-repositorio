@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ano = parseInt(prompt(`Insira um ano:`))
+        // if (ano < 400){
+        //     if ((ano % 4 == 0) ){
+        //     if ((ano % 100 == 0)){
+        //         alert(' o ano é bi')
+        //     }else {alert(' o ano não é bi')}
+        // }1500, 1974, 1982, 1983, 1990, 2018, 2022, 2030, 2038, ..
+        // 1600, 1996, 2000, 2004, 2008, 2012, 2016, 2400, 2800
+
+        if ((ano % 4 == 0) ){
+            if ((ano % 100 == 0)){
+                if ((ano % 400 == 0)){
+                alert(' o ano é bi')
+                }else {alert(' o ano não é bi')}
+            }{alert(' o ano 1é bi')}
+        } else {alert(' o ano não é bi')}
+    </script>
+</body>
+</html>

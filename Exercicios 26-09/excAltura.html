@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const alturaAlunos = []
+        let min = Number.MAX_VALUE
+        let max = 0
+        for (i = 1; i <= 15; i++) {
+            alturaAlunos.push(parseFloat(prompt(`Insira em centimetros a altura do ${i}° aluno`))) 
+        }
+        for (let altura of alturaAlunos) {
+            if (altura < min) {
+                min = altura
+            } if (max < altura) {
+                max = altura
+            }       
+        }
+        alert(`o aluno mais alto tem ${max}cm de altura`)
+        alert(`o aluno mais baixo tem ${min}cm de altura`)
+    </script>
+</body>
+</html>
